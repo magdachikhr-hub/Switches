@@ -1,7 +1,10 @@
 div.on_off {
-  margin-top: 32px;
   display: flex;
   align-items: center;
+}
+div.on_off label {
+  margin-left: 10px;
+  color: #34c759;
 }
 div.on_off #turn {
   -webkit-appearance: none;
@@ -28,7 +31,7 @@ div.on_off #turn::before, div.on_off #turn::after {
   border-radius: 50%;
   top: 3px;
   background-color: #ffffff;
-  transition: all 100ms linear;
+  transition: all 200ms ease;
 }
 div.on_off #turn::after {
   right: 1px;
@@ -42,4 +45,7 @@ div.on_off #turn:checked::before {
 }
 div.on_off #turn:checked::after {
   opacity: 0;
+}
+div.on_off #turn:checked ~ label {
+  color: #a4a4a5;
 }/*# sourceMappingURL=style.css.map */

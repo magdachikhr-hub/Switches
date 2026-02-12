@@ -1,7 +1,12 @@
 div.on_off {
-  margin-top: 32px;
   display: flex;
   align-items: center;
+
+  label {
+    margin-left: 10px;
+    color: #34c759;
+  }
+
   #turn {
     appearance: none;
     width: 50px;
@@ -26,9 +31,8 @@ div.on_off {
       border: 1px solid #a4a4a5;
       border-radius: 50%;
       top: 3px;
-
       background-color: #ffffff;
-      transition: all 100ms linear;
+      transition: all 200ms ease;
     }
     &::after {
       right: 1px;
@@ -36,7 +40,6 @@ div.on_off {
     }
     &::before {
       left: 1px;
-      // background-color: green;
       opacity: 0;
     }
 
@@ -45,6 +48,10 @@ div.on_off {
     }
     &:checked::after {
       opacity: 0;
+    }
+
+    &:checked ~ label {
+      color: #a4a4a5;
     }
   }
 }

@@ -36,7 +36,6 @@ div.on_off {
     }
     &::after {
       right: 1px;
-      // background-color: $light_grey;
     }
     &::before {
       left: 1px;
@@ -45,6 +44,65 @@ div.on_off {
 
     &:checked::before {
       opacity: 1;
+    }
+    &:checked::after {
+      opacity: 0;
+    }
+
+    &:checked ~ label {
+      color: #a4a4a5;
+    }
+  }
+}
+
+div.small_on_off {
+  display: flex;
+  align-items: center;
+
+  label {
+    margin-left: 10px;
+    color: #5856d6;
+  }
+
+  #switch {
+    appearance: none;
+    width: 44px;
+    height: 17px;
+    border: none;
+    border-radius: 32px;
+    position: relative;
+    transition: all 100ms linear;
+    cursor: pointer;
+    background-color: #9e9ddd;
+
+    &:checked {
+      background-color: #d3d3d4;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border: none;
+      border-radius: 50%;
+      top: -2.5px;
+      background-color: #5856d6;
+      transition: all 50ms linear;
+    }
+    &::after {
+      right: 0;
+    }
+    &::before {
+      left: 0;
+      opacity: 0;
+    }
+
+    &:checked::before {
+      opacity: 1;
+      background-color: #ffffff;
+      border: 1px solid #a4a4a5;
     }
     &:checked::after {
       opacity: 0;

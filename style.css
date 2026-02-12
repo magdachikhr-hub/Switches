@@ -48,4 +48,58 @@ div.on_off #turn:checked::after {
 }
 div.on_off #turn:checked ~ label {
   color: #a4a4a5;
+}
+
+div.small_on_off {
+  display: flex;
+  align-items: center;
+}
+div.small_on_off label {
+  margin-left: 10px;
+  color: #5856d6;
+}
+div.small_on_off #switch {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 44px;
+  height: 17px;
+  border: none;
+  border-radius: 32px;
+  position: relative;
+  transition: all 100ms linear;
+  cursor: pointer;
+  background-color: #9e9ddd;
+}
+div.small_on_off #switch:checked {
+  background-color: #d3d3d4;
+}
+div.small_on_off #switch::before, div.small_on_off #switch::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border: none;
+  border-radius: 50%;
+  top: -2.5px;
+  background-color: #5856d6;
+  transition: all 50ms linear;
+}
+div.small_on_off #switch::after {
+  right: 0;
+}
+div.small_on_off #switch::before {
+  left: 0;
+  opacity: 0;
+}
+div.small_on_off #switch:checked::before {
+  opacity: 1;
+  background-color: #ffffff;
+  border: 1px solid #a4a4a5;
+}
+div.small_on_off #switch:checked::after {
+  opacity: 0;
+}
+div.small_on_off #switch:checked ~ label {
+  color: #a4a4a5;
 }/*# sourceMappingURL=style.css.map */

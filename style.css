@@ -1,0 +1,45 @@
+div.on_off {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+}
+div.on_off #turn {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 50px;
+  height: 30px;
+  border: none;
+  border-radius: 32px;
+  position: relative;
+  transition: all 100ms linear;
+  cursor: pointer;
+  background-color: #34c759;
+}
+div.on_off #turn:checked {
+  background-color: #d3d3d4;
+}
+div.on_off #turn::before, div.on_off #turn::after {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  border: 1px solid #a4a4a5;
+  border-radius: 50%;
+  top: 3px;
+  background-color: #ffffff;
+  transition: all 100ms linear;
+}
+div.on_off #turn::after {
+  right: 1px;
+}
+div.on_off #turn::before {
+  left: 1px;
+  opacity: 0;
+}
+div.on_off #turn:checked::before {
+  opacity: 1;
+}
+div.on_off #turn:checked::after {
+  opacity: 0;
+}/*# sourceMappingURL=style.css.map */
